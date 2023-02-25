@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Szczegóły pozycji budżetowej</title>
+</head>
+<body>
+    <h2>Zmień:</h2>
+    <form method="POST" action="/budgets/{{ budget_id }}">
+        {{ form.hidden_tag() }}
+        <table>
+            {% for field in form if field.widget.input_type != 'hidden' %}
+                <tr>
+                    <th>{{ field.label }} {% if field.flags.required %}*{% endif %}</th>
+                    <th>{{ field }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Zmienić">
+    </form>
+</body>
+</html>
