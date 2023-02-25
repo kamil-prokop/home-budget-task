@@ -1,0 +1,17 @@
+[
+    {
+        "pozycja": "prąd",
+        "opis": "faktura za prąd co 2 miesiące",
+        "zapłacone": true
+    },
+    {
+        "pozycja": "spożywka",
+        "opis": "jak sobota to do lidla",
+        "zapłacone": false
+    },
+    {
+        "pozycja": "elektronika",
+        "opis": "",
+        "zapłacone": false
+    }
+]
