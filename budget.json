@@ -1,15 +1,18 @@
 [
     {
+        "id": 1,
         "pozycja": "prąd",
         "opis": "faktura za prąd co 2 miesiące",
         "done": true
     },
     {
+        "id": 2,
         "pozycja": "spożywka",
         "opis": "jak sobota to do lidla",
         "done": false
     },
     {
+        "id": 3,
         "pozycja": "elektronika",
         "opis": "żarówka",
         "done": false
