@@ -12,19 +12,34 @@ class Budgets():
         return self.budgets
     
     def get(self, id):
-        return self.budgets[id]
+        budget = [budget for budget in self.all() if budget["id"] == id]
+        if budget:
+            return budget[0]
+        return []
     
     def create(self, data):
-        data.pop("csrf_token")
         self.budgets.append(data)
+        self.save_all()
+
+    def delete(self, id):
+        budget = self.get(id)
+        if budget:
+            self.budgets.remove(budget)
+            self.save_all()
+            return True
+        return False
+
+    def update(self, id, data):
+        budget = self.get(id)
+        if budget:
+            index = self.budgets.index(budget)
+            self.budgets[index] = data
+            self.save_all()
+            return True
+        return False
 
     def save_all(self):
         with open("budget.json", "w", encoding="UTF-8") as f:
             json.dump(self.budgets, f)
-    
-    def update(self, id, data):
-        data.pop("csrf_token")
-        self.budgets[id]=data
-        self.save_all()
-    
+   
 budgets = Budgets()
