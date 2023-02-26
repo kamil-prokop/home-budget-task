@@ -2,16 +2,16 @@
     {
         "pozycja": "prąd",
         "opis": "faktura za prąd co 2 miesiące",
-        "zapłacone": true
+        "done": true
     },
     {
         "pozycja": "spożywka",
         "opis": "jak sobota to do lidla",
-        "zapłacone": false
+        "done": false
     },
     {
         "pozycja": "elektronika",
-        "opis": "",
-        "zapłacone": false
+        "opis": "żarówka",
+        "done": false
     }
 ]
